@@ -76,10 +76,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
         fontFamily: 'Montserrat',
-        iconTheme: IconThemeData(
-          size: logicalWidth / 13,
-          color: Colors.black,
-        ),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder()
         )
