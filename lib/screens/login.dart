@@ -31,14 +31,23 @@ class _LoginState extends State<Login> {
             Form(
               key: _formKey,
               child: Column(
-                children: const [
+                children: [
                   // Add TextFormFields and ElevatedButton here.
-                  InputWithHelp(
+                  const InputWithHelp(
                       placeholder: 'DNI', tooltipMessage: 'Ayuda'),
-                  InputWithHelp(
+                  const InputWithHelp(
                       placeholder: 'FECHA DE EMISION', tooltipMessage: 'Ayuda'),
-                  SizedBox(height: 70,),
-                  WithTooltip(child: PrimaryButton(text: 'Ingresar'), tooltipMessage: 'Ayuda')
+                  const SizedBox(
+                    height: 70,
+                  ),
+                  WithTooltip(
+                      child: PrimaryButton(
+                        text: 'Ingresar',
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                      ),
+                      tooltipMessage: 'Ayuda')
                 ],
               ),
             )
