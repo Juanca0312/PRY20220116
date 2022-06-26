@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class InputWithHelp extends StatelessWidget {
   final String? placeholder;
   final String? tooltipMessage;
+  final bool? multiline;
 
   const InputWithHelp(
-      {Key? key, @required this.placeholder, @required this.tooltipMessage})
+      {Key? key, @required this.placeholder, @required this.tooltipMessage,this.multiline})
       : super(key: key);
 
   @override
@@ -20,6 +21,7 @@ class InputWithHelp extends StatelessWidget {
             width: 10.00,
           ),
           Flexible(child: TextFormField(
+            maxLines: multiline == null ? null : 5,
             decoration: InputDecoration(hintText: placeholder!),
           ),),
           const SizedBox(

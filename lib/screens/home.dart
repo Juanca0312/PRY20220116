@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pry20220116/screens/chatbot.dart';
+import 'package:pry20220116/screens/request.dart';
 
 enum Menu { itemOne, itemTwo, itemThree, itemFour }
 
@@ -22,10 +23,7 @@ class _HomeState extends State<Home> {
       style: optionStyle,
     ),
     ChatBot(),
-    Text(
-      'Index 2',
-      style: optionStyle,
-    ),
+    Request()
   ];
 
   void _onItemTapped(int index) {

@@ -53,6 +53,9 @@ class _ChatBotState extends State<ChatBot> {
       showUserAvatars: true,
       showUserNames: true,
       user: _user,
+      theme: const DefaultChatTheme(
+        inputBackgroundColor: Colors.grey,
+      ),
     );
   }
 }
